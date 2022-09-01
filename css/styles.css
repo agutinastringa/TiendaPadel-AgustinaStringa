@@ -1,0 +1,153 @@
+body {
+    height: 60vh;
+    background-color: rgba(0, 0, 0, 0.664);
+    font-family: 'Montserrat', sans-serif; 
+}
+header, .alert{
+    z-index: 100;
+}
+.hide, .remove{
+    display: none;
+}
+ul{
+    gap: 3rem;
+}
+ul li {
+    background-color: #119105;
+    border-radius: 6px;
+}
+ul li:hover {
+    background-color: #3ce92c; 
+}
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    text-align: center; 
+}
+.nav-link:active{
+    background-color: #3ce92c; 
+}
+main{
+    margin-top: 20px;
+}
+.titulo{
+    text-align: center;
+    text-transform: uppercase;
+}
+.productos{
+    margin-top: 20px;
+    display: grid;
+    grid-template-areas: "prod1"
+                        "prod2" 
+                        "prod3" 
+                        "prod4";
+    justify-items: center;
+}
+.card-title{
+    color: white;
+}
+.card-price{
+    color: white;
+}
+.producto1{
+    grid-area: "prod1";
+    background-color: rgba(34, 33, 33, 0.664);
+}
+.producto2{
+    grid-area: "prod2";
+    background-color: rgba(34, 33, 33, 0.664);
+}
+.producto3{
+    grid-area: "prod3";
+    background-color: rgba(34, 33, 33, 0.664);
+}
+.producto4{
+    grid-area: "prod4";
+    background-color: rgba(34, 33, 33, 0.664);
+}
+.btn-anadir{
+    width: 100%;
+    background-color: #119105;
+    border-color: #119105;
+}
+.btn-anadir:hover{
+    background-color: #3ce92c;
+    border-color: white;
+}
+.carrito{
+    margin-top: 20px;
+    min-height: 70vh;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+}
+.tbl-carrito{
+    margin: 0 auto;
+    width: 100%;
+}
+.table_productos{
+    display: flex;
+}
+.table-productos > img{
+    width: 9rem;
+    object-fit: contain;
+    border-radius: 6px;
+    margin-right: 20px;
+}
+.table-cantidad > input{
+    width: 40px;
+    border: none;
+    outline: 0;
+    font-size: 16px;
+    font-weight: 700;
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+.total{
+    margin-top: 20px;
+}
+
+/* MEDIA QUERIES */
+@media screen and (min-width:480px) {   
+    nav{
+        grid-area: nav;
+    }
+    nav ul{
+        justify-content: center;
+        gap: 0.2rem;
+    }
+    nav ul li{
+        padding: 0.5rem;
+    }
+    nav ul .nav-link{
+        font-size: 13px;
+    }
+}
+
+@media screen and (min-width:600px) {
+    nav ul{
+        gap: 1rem;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .menu{
+        display: flex;
+        justify-content: center;
+    } 
+    nav ul{ 
+        gap: 3rem;
+    }
+    nav ul li{
+        border-radius: 1.5rem;
+    }
+    nav ul .nav-link{
+        font-size: 20px;
+    }
+    .productos{
+        display: grid;
+        grid-template-areas: "prod1 prod2 prod3 prod4";
+        justify-items: center;
+    }
+}
