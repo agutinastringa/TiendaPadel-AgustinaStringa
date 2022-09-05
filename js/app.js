@@ -5,6 +5,7 @@ clickButton.forEach(btn => {
     btn.addEventListener('click', addToCarritoItem);
 })
 
+//Función para agregar un ítem al carrito
 function addToCarritoItem(e){
     const button = e.target;
     const item = button.closest('.card');
@@ -22,7 +23,9 @@ function addToCarritoItem(e){
     addItemCarrito(newItem);
 }
 
+//Función para guardar el ítem en el carrito, sumar total 
 function addItemCarrito(newItem){
+    const{title, precio, img, cantidad} = newItem;
     const alert = document.querySelector('.alert');
     setTimeout(function(){
         alert.classList.add('hide');
@@ -30,7 +33,7 @@ function addItemCarrito(newItem){
     alert.classList.remove('hide');
     const inputElemento = tbody.getElementsByClassName('inputCantidad')
     for(let i=0; i < carrito.length; i++){
-        if(carrito[i].title.trim() === newItem.title.trim()){
+        if(carrito[i].title.trim() === title.trim()){
             carrito[i].cantidad ++;
             const inputCantidad = inputElemento[i];
             inputCantidad.value++;
@@ -42,6 +45,7 @@ function addItemCarrito(newItem){
     renderCarrito();
 }
 
+//Función que modifica el HTML para que muestre la tabla del carrito con sus ítems.
 function renderCarrito(){
     tbody.innerHTML = '';
     carrito.map(item => {
@@ -64,6 +68,7 @@ function renderCarrito(){
     carritoTotal()
 }
 
+//Función encargada de calcular el total del carrito.
 function carritoTotal(){
     let total = 0;
     const itemCarrTotal = document.querySelector('.itemCarTotal');
@@ -75,14 +80,13 @@ function carritoTotal(){
     addLocalStorage();
 }
 
+//Función para eliminar ún ítem del carrito
 function removeItemCarrito(e){
     const buttonDelete = e.target;
     const tr = buttonDelete.closest('.itemCarrito');
     const title = tr.querySelector('.title').textContent;
     for(let i=0; i<carrito.length; i++){
-        if(carrito[i].title.trim() === title.trim()){
-            carrito.splice(i, 1);
-        }
+        carrito[i].title.trim() === title.trim() && carrito.splice(i, 1);
     }
     const alert = document.querySelector('.remove');
     setTimeout(function(){
@@ -93,6 +97,7 @@ function removeItemCarrito(e){
     carritoTotal();
 }
 
+//Función para sumar la cantidad deun ítem
 function sumaCantidad(e){
     const inputSuma = e.target;
     const tr = inputSuma.closest('.itemCarrito');
