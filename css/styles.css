@@ -3,11 +3,8 @@ body {
     background-color: rgba(0, 0, 0, 0.664);
     font-family: 'Montserrat', sans-serif; 
 }
-header, .alert{
+header{
     z-index: 100;
-}
-.hide, .remove{
-    display: none;
 }
 ul{
     gap: 3rem;

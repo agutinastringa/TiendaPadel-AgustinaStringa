@@ -26,12 +26,13 @@ function addToCarritoItem(e){
 //Función para guardar el ítem en el carrito, sumar total 
 function addItemCarrito(newItem){
     const{title, precio, img, cantidad} = newItem;
-    const alert = document.querySelector('.alert');
-    setTimeout(function(){
-        alert.classList.add('hide');
-    }, 2000)
-    alert.classList.remove('hide');
-    const inputElemento = tbody.getElementsByClassName('inputCantidad')
+    const inputElemento = tbody.getElementsByClassName('inputCantidad');
+    swal({
+        title: "Producto añadido al carrito!",
+        icon: "success",
+        button: false,
+        timer: 1500
+    });
     for(let i=0; i < carrito.length; i++){
         if(carrito[i].title.trim() === title.trim()){
             carrito[i].cantidad ++;
@@ -88,11 +89,12 @@ function removeItemCarrito(e){
     for(let i=0; i<carrito.length; i++){
         carrito[i].title.trim() === title.trim() && carrito.splice(i, 1);
     }
-    const alert = document.querySelector('.remove');
-    setTimeout(function(){
-        alert.classList.add('remove');
-    }, 2000)
-    alert.classList.remove('remove');
+    swal({
+        title: "Producto eliminado del carrito!",
+        icon: "error",
+        button: false,
+        timer: 1500
+    });
     tr.remove();
     carritoTotal();
 }
