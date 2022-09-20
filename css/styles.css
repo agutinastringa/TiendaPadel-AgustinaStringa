@@ -32,36 +32,24 @@ main{
     text-align: center;
     text-transform: uppercase;
 }
-.productos{
+.contenedorProductos{
     margin-top: 20px;
-    display: grid;
-    grid-template-areas: "prod1"
-                        "prod2" 
-                        "prod3" 
-                        "prod4";
-    justify-items: center;
+    justify-content: center;
+}
+.card{
+    width: 18rem;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: rgba(34, 33, 33, 0.664);
+}
+.card-img-top{
+    margin-top: 10px;
 }
 .card-title{
     color: white;
 }
 .card-price{
     color: white;
-}
-.producto1{
-    grid-area: "prod1";
-    background-color: rgba(34, 33, 33, 0.664);
-}
-.producto2{
-    grid-area: "prod2";
-    background-color: rgba(34, 33, 33, 0.664);
-}
-.producto3{
-    grid-area: "prod3";
-    background-color: rgba(34, 33, 33, 0.664);
-}
-.producto4{
-    grid-area: "prod4";
-    background-color: rgba(34, 33, 33, 0.664);
 }
 .btn-anadir{
     width: 100%;
@@ -141,10 +129,5 @@ main{
     }
     nav ul .nav-link{
         font-size: 20px;
-    }
-    .productos{
-        display: grid;
-        grid-template-areas: "prod1 prod2 prod3 prod4";
-        justify-items: center;
     }
 }

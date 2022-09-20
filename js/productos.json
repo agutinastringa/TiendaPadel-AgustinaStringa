@@ -1,0 +1,26 @@
+[
+    {
+        "id":1,
+        "nombre":"Conjunto de hombre",
+        "precio":10000,
+        "img":"../img/conjunto.png"
+    },
+    {
+        "id":2,
+        "nombre":"Bolso paletero",
+        "precio":12000,
+        "img":"../img/portapaletas.jpg"
+    },
+    {
+        "id":3,
+        "nombre":"Zapatilla",
+        "precio":20000,
+        "img":"../img/zapatilla.png"
+    },
+    {
+        "id":4,
+        "nombre":"Paleta",
+        "precio":80000,
+        "img":"../img/paleta.jpg"
+    }
+]

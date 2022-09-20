@@ -26,73 +26,43 @@
             </li>
         </ul>
         <!-- Fin del header -->
-    </header>    
-    <div class="tab-content" id="pills-tabContent">
-        <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-            <h2 class="titulo">Home</h2>
-        </div>
-        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-            <h2 class="titulo">Productos</h2>
-            <div class="productos">
-                <div class="card producto1" style="width: 18rem;">
-                    <img src="../img/conjunto.png" class="card-img-top" alt="conjunto">
-                    <div class="card-body">
-                    <h5 class="card-title">Conjunto de hombre</h5>
-                    <p class="card-price">$10000</p>
-                    <a href="#" class="btn btn-primary btn-anadir">Añadir al carrito</a>
-                    </div>
+    </header>
+    <main>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                <h2 class="titulo">Home</h2>
+            </div>
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <h2 class="titulo">Productos</h2>
+                <div class="contenedorProductos row" id="contenedorProductos">
                 </div>
-                <div class="card producto2" style="width: 18rem;">
-                    <img src="../img/portapaletas.jpg" class="card-img-top" alt="portapaletas">
-                    <div class="card-body">
-                    <h5 class="card-title">Bolso paletero</h5>
-                    <p class="card-price">$12000</p>
-                    <a href="#" class="btn btn-primary btn-anadir">Añadir al carrito</a>
+            </div>
+            <div class="tab-pane fade carrito" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                <h2 class="titulo">Carrito</h2>
+                <table class="table table-dark table-hover tbl-carrito">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Productos</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Cantidad</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tbody">
+    
+                    </tbody>
+                </table>
+                <div class="row mx-4 total">
+                    <div class="col">
+                        <h4 class="itemCarTotal">Total: 0</h4>
                     </div>
-                </div>
-                <div class="card producto3" style="width: 18rem;">
-                    <img src="../img/zapatilla.png" class="card-img-top" alt="Zapatilla">
-                    <div class="card-body">
-                    <h5 class="card-title">Zapatilla</h5>
-                    <p class="card-price">$20000</p>
-                    <a href="#" class="btn btn-primary btn-anadir">Añadir al carrito</a>
-                    </div>
-                </div>
-                <div class="card producto4" style="width: 18rem;">
-                    <img src="../img/paleta.jpg" class="card-img-top" alt="Paleta">
-                    <div class="card-body">
-                    <h5 class="card-title">Paleta</h5>
-                    <p class="card-price">$80000</p>
-                    <a href="#" class="btn btn-primary btn-anadir">Añadir al carrito</a>
+                    <div class="col d-flex justify content-end">
+                        <button class="btn btn-success">COMPRAR</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="tab-pane fade carrito" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-            <h2 class="titulo">Carrito</h2>
-            <table class="table table-dark table-hover tbl-carrito">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Productos</th>
-                        <th scope="col">Precio</th>
-                        <th scope="col">Cantidad</th>
-                    </tr>
-                </thead>
-                <tbody class="tbody">
-
-                </tbody>
-            </table>
-            <div class="row mx-4 total">
-                <div class="col">
-                    <h4 class="itemCarTotal">Total: 0</h4>
-                </div>
-                <div class="col d-flex justify content-end">
-                    <button class="btn btn-success">COMPRAR</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    </main>
     <footer class="bg-dark p-3 mt-5">
         <p class="text-center m-0 text-muted">AGUSTINA STRINGA</p>
     </footer>

@@ -1,26 +1,40 @@
-const clickButton = document.querySelectorAll('.btn-anadir');
+const contenedorProductos = document.getElementById('contenedorProductos');
+
 const tbody = document.querySelector('.tbody');
 let carrito = [];
-clickButton.forEach(btn => {
-    btn.addEventListener('click', addToCarritoItem);
-})
+fetch('/js/productos.json')
+    .then((res) => res.json())
+    .then((data) => {
+        data.forEach((producto) =>{
+            const div = document.createElement('div')
+            div.classList.add('card');
+            div.innerHTML = 
+                        `<img src=${producto.img} class="card-img-top" alt="conjunto">
+                        <div class="card-body">
+                        <h5 class="card-title">${producto.nombre}</h5>
+                        <p class="card-price">$${producto.precio}</p>
+                        <a href="#" id="agregar${producto.id}" class="btn btn-primary btn-anadir">Añadir al carrito</a>
+                        </div>` 
+            contenedorProductos.append(div)
+
+            const clickButton = document.getElementById(`agregar${producto.id}`);
+            clickButton.addEventListener('click', () => {
+                addToCarritoItem(producto.id)
+            })
+        })
+    })
+
 
 //Función para agregar un ítem al carrito
-function addToCarritoItem(e){
-    const button = e.target;
-    const item = button.closest('.card');
-    const itemTitle = item.querySelector('.card-title').textContent;
-    const itemPrice = item.querySelector('.card-price').textContent;
-    const itemImg = item.querySelector('.card-img-top').src;
-    
-    const newItem = {
-        title: itemTitle,
-        precio: itemPrice,
-        img: itemImg,
-        cantidad: 1
-    }
+function addToCarritoItem(prodId){
+    const newItem = data.find((prod) => prod.id === prodId)
 
-    addItemCarrito(newItem);
+            // title: prod.nombre,
+            // precio: prod.precio,
+            // img: prod.img,
+            // cantidad: 1
+        
+        // addItemCarrito(newItem)
 }
 
 //Función para guardar el ítem en el carrito, sumar total 
