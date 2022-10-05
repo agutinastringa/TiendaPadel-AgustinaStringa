@@ -1,26 +1,140 @@
 [
     {
         "id":1,
-        "nombre":"Conjunto de hombre",
-        "precio":10000,
-        "img":"../img/conjunto.png"
+        "nombre":"Paleta Adidas Adipower Ctrl Series verde Alejandro Lasaigues",
+        "precio":85900,
+        "img":"../img/paleta1.jpg"
     },
     {
         "id":2,
-        "nombre":"Bolso paletero",
-        "precio":12000,
-        "img":"../img/portapaletas.jpg"
+        "nombre":"Paleta Adidas Adipower Ctrl Series azul Alejandro Lasaigues",
+        "precio":85900,
+        "img":"../img/paleta2.jpg"
     },
     {
         "id":3,
-        "nombre":"Zapatilla",
-        "precio":20000,
-        "img":"../img/zapatilla.png"
+        "nombre":"Paleta Adidas Precision PRO",
+        "precio":35800,
+        "img":"../img/paleta3.jpg"
     },
     {
         "id":4,
-        "nombre":"Paleta",
-        "precio":80000,
-        "img":"../img/paleta.jpg"
+        "nombre":"Paleta Adidas Training CTRL",
+        "precio":35800,
+        "img":"../img/paleta4.jpg"
+    },
+    {
+        "id":5,
+        "nombre":"Paleta Adidas Zukur CTRL 2.0 LTD Golden",
+        "precio":57300,
+        "img":"../img/paleta5.jpg"
+    },
+    {
+        "id":6,
+        "nombre":"Paleta Adidas Zukur CTRL 2.0 LTD Silver",
+        "precio":57300,
+        "img":"../img/paleta6.jpg"
+    },
+    {
+        "id":7,
+        "nombre":"Paleta Adidas Zukur CTRL 2.0 LTD Orange",
+        "precio":57300,
+        "img":"../img/paleta7.jpg"
+    },
+    {
+        "id":8,
+        "nombre":"Paleta Adidas Adipower Light 2.0",
+        "precio":102000,
+        "img":"../img/paleta8.jpg"
+    },
+    {
+        "id":9,
+        "nombre":"Bolso Paletero Adidas Multigame Blanco",
+        "precio":40700,
+        "img":"../img/bolso1.jpg"
+    },
+    {
+        "id":10,
+        "nombre":"Bolso Paletero Adidas Multigame Negro",
+        "precio":40700,
+        "img":"../img/bolso2.jpg"
+    },
+    {
+        "id":11,
+        "nombre":"Bolso Paletero Adidas Control Silver",
+        "precio":25500,
+        "img":"../img/bolso3.jpg"
+    },
+    {
+        "id":12,
+        "nombre":"Bolso Paletero Adidas Control White",
+        "precio":25500,
+        "img":"../img/bolso4.jpg"
+    },
+    {
+        "id":13,
+        "nombre":"Tubo de pelotas Varlion Summum Pro",
+        "precio":3400,
+        "img":"../img/pelotas1.jpg"
+    },
+    {
+        "id":14,
+        "nombre":"Tubo de pelotas Adidas Speed RX",
+        "precio":3800,
+        "img":"../img/pelotas2.jpg"
+    },
+    {
+        "id":15,
+        "nombre":"Overgrip Odea Liso",
+        "precio":500,
+        "img":"../img/overgrip1.jpg"
+    },
+    {
+        "id":16,
+        "nombre":"Overgrip Odea Perforado",
+        "precio":600,
+        "img":"../img/overgrip2.jpg"
+    },
+    {
+        "id":16,
+        "nombre":"Overgrip Odea Perforado",
+        "precio":600,
+        "img":"../img/overgrip2.jpg"
+    },
+    {
+        "id":17,
+        "nombre":"Overgrip Odea con Relieve",
+        "precio":650,
+        "img":"../img/overgrip3.jpg"
+    },
+    {
+        "id":18,
+        "nombre":"Overgrip Varlion Summum Air Multicolor",
+        "precio":1200,
+        "img":"../img/overgrip4.jpg"
+    },
+    {
+        "id":19,
+        "nombre":"Overgrip Sane Liso Multicolor",
+        "precio":520,
+        "img":"../img/overgrip5.jpg"
+    },
+    {
+        "id":20,
+        "nombre":"Overgrip Sane Perforado Multicolor",
+        "precio":550,
+        "img":"../img/overgrip6.jpg"
+    },
+    {
+        "id":21,
+        "nombre":"Overgrip Adidas Perforado Multicolor",
+        "precio":950,
+        "img":"../img/overgrip7.jpg"
+    },
+    {
+        "id":22,
+        "nombre":"Overgrip Adidas Perforado Blanco",
+        "precio":950,
+        "img":"../img/overgrip8.jpg"
     }
 ]

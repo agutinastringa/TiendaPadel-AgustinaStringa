@@ -19,22 +19,22 @@ fetch('/js/productos.json')
 
             const clickButton = document.getElementById(`agregar${producto.id}`);
             clickButton.addEventListener('click', () => {
-                addToCarritoItem(producto.id)
+                const newItem = data.find((prod) => prod.id === producto.id)
+                addToCarritoItem(newItem)
             })
         })
     })
 
 
 //Función para agregar un ítem al carrito
-function addToCarritoItem(prodId){
-    const newItem = data.find((prod) => prod.id === prodId)
-
-            // title: prod.nombre,
-            // precio: prod.precio,
-            // img: prod.img,
-            // cantidad: 1
-        
-        // addItemCarrito(newItem)
+function addToCarritoItem(producto){
+    const newItem = {
+        title: producto.nombre,
+        precio: producto.precio,
+        img: producto.img,
+        cantidad: 1
+    }
+    addItemCarrito(newItem)
 }
 
 //Función para guardar el ítem en el carrito, sumar total 
@@ -45,7 +45,7 @@ function addItemCarrito(newItem){
         title: "Producto añadido al carrito!",
         icon: "success",
         button: false,
-        timer: 1500
+        timer: 1000
     });
     for(let i=0; i < carrito.length; i++){
         if(carrito[i].title.trim() === title.trim()){
@@ -88,7 +88,7 @@ function carritoTotal(){
     let total = 0;
     const itemCarrTotal = document.querySelector('.itemCarTotal');
     carrito.forEach((item) => {
-        const precio = Number(item.precio.replace("$", ''))
+        const precio = Number(item.precio)
         total = total + precio * item.cantidad;
     })
     itemCarrTotal.innerHTML = `Total $${total}`;
@@ -107,7 +107,7 @@ function removeItemCarrito(e){
         title: "Producto eliminado del carrito!",
         icon: "error",
         button: false,
-        timer: 1500
+        timer: 1000
     });
     tr.remove();
     carritoTotal();
